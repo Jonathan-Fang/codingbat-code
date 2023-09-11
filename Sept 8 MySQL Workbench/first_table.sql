@@ -1,0 +1,1 @@
+SELECT * FROM first_database.first_table;
