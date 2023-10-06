@@ -6,3 +6,5 @@ or (CITY like 'e%' and CITY like '%e')
 or (CITY like 'i%' and CITY like '%i') 
 or (CITY like 'o%' and CITY like '%o') 
 or (CITY like 'u%' and CITY like '%u');
+
+-- why does specifically i% not work?
