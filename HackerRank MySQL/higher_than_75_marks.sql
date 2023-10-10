@@ -11,4 +11,7 @@ from STUDENTS
 where Marks > 75 
 ORDER BY ID ASC;
 
+select substr(NAME)
+select NAME from STUDENTS where Marks > 75 ORDER BY RIGHT(NAME, 3) ASC, ID ASC;
+
 -- where NAME like '%
