@@ -17,3 +17,7 @@ def first_last6(nums):
         i = i + 1
     return False
     # else return false
+
+# codingbat says
+# return (nums[0]==6 or nums[-1]== 6)
+# ITS SO CONCISE

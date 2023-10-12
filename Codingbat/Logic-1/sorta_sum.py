@@ -6,3 +6,10 @@ def sorta_sum(a, b):
     return 20
   else:
     return ab_sum
+
+# codingbat says
+# def sorta_sum(a, b):
+#   sum = a + b
+#   if sum >= 10 and sum <= 19:
+#     return 20
+#   return sum
