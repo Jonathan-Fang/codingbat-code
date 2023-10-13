@@ -4,14 +4,14 @@
 -- Link: https://www.hackerrank.com/challenges/more-than-75-marks/problem?isFullScreen=true&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
 -- Status:
 
-select NAME, RIGHT(NAME, 3) AS EXTRACTEDSTR FROM STUDENTS where Marks > 75 and ('%%%' like '%%%') ORDER BY ID ASC;
+-- select NAME, RIGHT(NAME, 3) AS EXTRACTEDSTR FROM STUDENTS where Marks > 75 and ('%%%' like '%%%') ORDER BY ID ASC;
 
-select NAME 
-from STUDENTS 
-where Marks > 75 
-ORDER BY ID ASC;
+-- select NAME 
+-- from STUDENTS 
+-- where Marks > 75 
+-- ORDER BY ID ASC;
 
-select substr(NAME)
+-- select substr(NAME)
 select NAME from STUDENTS where Marks > 75 ORDER BY RIGHT(NAME, 3) ASC, ID ASC;
 
 -- where NAME like '%
