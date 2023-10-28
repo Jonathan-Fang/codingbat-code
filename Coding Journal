@@ -1,3 +1,11 @@
+### October 27, 2023
+- solved one HackerRank problem
+- learned about hotlinking from Unsplash API
+- flask-account
+    - unsplash API image renders correctly
+    - google fonts favnum renders correctly
+    - added createdtime col to sql database, it renders on the view account page
+- resume at: login, then delete account after logging in; otherwise, wait could just preset delete account thing
 
 ### October 26, 2023
 - solved one HackerRank problem
