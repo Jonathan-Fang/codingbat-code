@@ -1,0 +1,3 @@
+-- weird way to subtract in SQL
+
+SELECT MAX(POPULATION) - (SELECT MIN(POPULATION) FROM CITY) FROM CITY;
