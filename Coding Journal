@@ -1,6 +1,92 @@
+# Resume at
 - resuming at freecodecamp, css module
+- apply CSS notes to flask-account project
 - get to the relational database mysql part
 - complete the project; try within a week?
+- i can do some of the password validation things
+- i can also do some fieldset stuff, labels with the create account
+- check input type number in the project
+- add labels, change placeholders
+- rewrite with rem
+
+### November 6, 2023
+- finished the first HTML/CSS certification project on freecodecamp, a survey form
+
+### November 4, 2023
+- tried one coding exercise HackerRank SQL
+- body margin 0, get rid of horizontal scrollbar
+- what is a rem unit css
+    - The rem unit stands for root em, and is relative to the font size of the html element. whatever this means
+- label elements are inline by default; CSS DEFAULT VALUES FOR HTML ELEMENTS
+- Following accessibility best practices, link the input elements and the label elements together using the for attribute.
+- for attribute
+- The first input element with a type of submit is automatically set to submit its nearest parent form element.
+- Add custom validation to the password input element, by adding a minlength attribute with a value of 8. Doing so prevents inputs of less than 8 characters being submitted.
+- place required attribute at the end
+
+Use first-name, last-name, email, and new-password as values for the respective id attributes.
+- With type="password" you can use the pattern attribute to define a regular expression that the password must match to be considered valid.
+
+Add a pattern attribute to the password input element to require the input match: [a-z0-5]{8,}
+
+The above is a regular expression which matches eight or more lowercase letters or the digits 0 to 5. Then, remove the minlength attribute, and try it out.
+- Currently when someone submit the form, they can submit it without checking the radio inputs. Although you had used required attribute to indicate the the input is required previously, this can't work in this case, because adding required to both inputs, will convey the wrong information to the form users.
+
+To solve this, you can provide context of what is needed by adding legend element below the second fieldset with text Account type (required), then add checked attribute to the Personal input to make sure that the form is submitted with the required data in it.
+- accessibility best practices, label=for attribute, input-id attribute, to associate label with input, to link them together
+- Add another label after the first, with the text Input your age (years): . Then, nest an input with the type of number.
+
+Next, add a min attribute to the input with a value of 13 because users under the age of 13 should not register. Also, users probably will not be over the age of 120; add a max attribute with a value of 120.
+-Adding a dropdown to the form is easy with the select element. The select element is a container for a group of option elements, and the option element acts as a label for each dropdown option. Both elements require closing tags.
+- Submitting the form with an option selected would not send a useful value to the server. As such, each option needs to be given a value attribute. Without which, the text content of the option will be submitted to the server.
+
+Give the first option a value of "", and the subsequent option elements value attributes from 1 to 4.
+- The textarea element acts like an input element of type text, but comes with the added benefit of being able to receive multi-line text, and an initial number of text rows and columns.
+- Link the applicable form elements and their label elements together.
+- The textarea appears too small. To give it an initial size, you can add the rows and cols attributes.
+
+Add an initial size of 3 rows and 30 columns.
+- placeholder attribute "like examples"
+- With form submissions, it is useful, and good practice, to provide each submittable element with a name attribute. This attribute is used to identify the element in the form submission.
+
+Give each submittable element a unique name attribute of your choosing, except for the two radio inputs.
+- Step 43
+The HTML for the registration form is finished. Now, you can spruce it up a bit.
+
+Start by changing the font to Tahoma, and the font size to 16px in the body.
+- Center the form element, by giving it a margin of 0 auto. Then, fix its size to a maximum width of 500px, and a minimum width of 300px. In between that range, allow it to have a width of 60vw.
+- During development, it is useful to see the fieldset default borders. However, they make the content appear too separated.
+
+Remove the border, and add 2rem of padding only to the top and bottom of each fieldset. Be sure to remove the padding from the left and right.
+- The border of the last fieldset element looks a little out of place. You can select the last element of a specific type using the last-of-type CSS pseudo-class, like this:
+
+p:last-of-type { }
+That will select the last p element. Create a new selector that targets the last fieldset element and set its border-bottom to none.
+
+It would be nicer to have the label text appear above the form elements.
+
+Select all input, textarea, and select elements, and make them take up the full width of their parent elements.
+
+Also, add 10px of margin to the top of the selected elements. Set the other margins to 0.
+- Select only the .inline elements, and give them width of unset. This will remove the earlier rule which set all the input elements to width: 100%.
+- If you look close enough, you will notice the .inline elements are too high on the line.
+
+To combat this, set the vertical-align property to middle.
+- Currently, if you type in the input or textarea elements, you will not be able to see the text. Also, their height is too small to be easy to use.
+
+Fix this, by setting the color to #ffffff, and setting their min-height to 2em.
+- To style the submit button, you can use an attribute selector, which selects an element based on the given attribute value. Here is an example:
+
+input[name="password"]
+The above selects input elements with a name attribute value of password.
+- With a display of block the submit button sits flush against the left edge of its parent.
+
+Use the same technique used to center the form to center the submit button. (0 auto)
+- To make the submit button appear more distinct, give it a background-color of #3b3b4f, and a border-color of white.
+- Most browsers inject their own default CSS properties and values for different elements. If you look closely, you might be able to notice the file input is smaller than the other text input elements. By default, a padding of 1px 2px is given to input elements you can type in.
+
+Using another attribute selector, style the input with a type of file to be the same padding as the other input elements.
+- Speaking of padding, the submit button is sitting at the bottom of the form element. Add 2em of padding only to the bottom of the form.
 
 ### November 3, 2023
 - added input required element to forms
