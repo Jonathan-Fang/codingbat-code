@@ -13,10 +13,180 @@
 - remove placeholders, accessibility
 - apply navbar idea, nov 8
   - on hover, switch colors, cursor pointer
+- tables in flask-account nov 9
+
+<!--  -->
+
+### December 6, 2023
+<!--  -->
+- Give the new buildings width and height properties of: 10% and 50% for .bb2, 10% and 55% for .bb3, and 11% and 58% for .bb4. You will be using almost all percent based units and some flexbox for this project, so everything will be completely responsive.
+
+### December 5, 2023
+- reinstalled MySQL 8.0 and Workbench
+- figuring out how to use SSH on Git one time access
+<!--  -->
+- To use a variable, put the variable name in parentheses with var in front of them like this: var(--variable-name). Whatever value you gave the variable will be applied to whatever property you use it on.
+
+Add the variable --building-color1 you created in the previous step as the value of the background-color property of the .bb1a class.
+- Change the value of your variable from #999 to #aa80ff and you can see how it gets applied everywhere you used the variable. This is the main advantage of using variables, being able to quickly change many values in your stylesheet by just changing the value of a variable.
+
+### December 4, 2023
+- reinstalled windows OS, need to reinstall these things
+- reinstalled Git
+<!--  -->
+- Now you have something that is resembling a building. You are ready to create your first variable. Variable declarations begin with two dashes (-) and are given a name and a value like this: --variable-name: value;. In the rule for the bb1 class, create a variable named --building-color1 and give it a value of #999.
+
+### November 28, 2023
+- i did freecodecamp for another minute
+<!--  -->
+- You can see the body (it's the inner-most box on your page); the box around it is the html element. Make your body fill the whole viewport by giving it a height of 100vh. Remove the default margin from the body by setting the margin to 0. Finally, set the overflow property to hidden to hide any scroll bars that appear when something extends past the viewport.
+- Give your .background-buildings element a width and height of 100% to make it the full width and height of its parent, the body.
+
+### November 27, 2023
+- i did freecodecamp for a minute
+
+### November 13, 2023
+- 
+<!--  -->
+- Use the universal selector to add box-sizing: border-box; to your CSS. This ensures elements include padding and border in their specified width and height.
+- To see the cat-head element, give it a linear gradient background with #5e5e5e at 85% and #45454f at 100%.
+- CSS positioning lets you set how you want an element to be positioned in the browser. It has a position property you can set to static, absolute, relative, sticky or fixed.
+
+Once you set the position property of the element, you can move the element around by setting a pixel or a percentage value for one or more of the top, right, left, or bottom properties.
+
+static is the default positioning for all elements. If you assign it to an element, you won't be able to move it around with top, right, left, or bottom.
+- You could see that nothing happens. The .cat-head element did not move despite setting a top and left of 100px each. But that's not the case with relative positioning.
+
+When you use the relative value, the element is still positioned according to the normal flow of the document, but the top, left, bottom, and right values become active.
+- The next position property is absolute. When you use the absolute value for your position property, the element is taken out of the normal flow of the document, and then its position is determined by the top, right, bottom, and left properties.
+
+Set the position property of your .cat-head element to absolute, then set top and left properties to any pixel value.
+- fixed is a position property value that lets you make an element fixed to the page no matter where the user scrolls to on the page.
+- sticky is like hybrid of relative and fixed? if text is there, it'll get stuck there; https://www.kevinpowell.co/article/positition-fixed-vs-sticky/
+- You should now center the cat head.
+
+Give the .cat-head element a position property set to absolute. Set a value of 0 for the right, left, top, bottom properties, then set its margin property on all sides to auto. That's one way to center an element vertically and horizontally using CSS positioning.
+- how to make triangles in css, like border left right bottom, transparent?? https://css-tricks.com/snippets/css/css-triangle/
+- To position the left ear properly, you can use CSS transform to rotate it in a certain degree.
+
+The transform property allows you to modify the shape, position, and size of an element without changing the layout or affecting the surrounding elements. It has functions such as translate(), rotate(), scale(), skew(), and matrix().
+
+Set the transform property to rotate(-45deg) and see what happens.
+- The ears should always be placed above the part of the head it overlaps. You can do this with the z-index property.
+
+z-index is a property you can use to define the order of overlapping HTML elements. Any element with a higher z-index will always be positioned over an element with a lower z-index.
+
+To see z-index in action, set the z-indexproperty of the left ear to -1.
+- Using a descendant selector, select the two div elements inside the div with class cat-mouth.
+<!--  -->
+- Browsers can apply default margin and padding values to specific elements. To make sure your piano looks correct, you need to reset the box model.
+- Now that you have reset the html box model, you need to pass that on to the elements within as well. To do this, you can set the box-sizing property to inherit, which will tell the targeted elements to use the same value as the parent element.
+
+You will also need to target the pseudo-elements, which are special keywords that follow a selector. The two pseudo-elements you will be using are the ::before and ::after pseudo-elements.
+
+The ::before selector creates a pseudo-element which is the first child of the selected element, while the ::after selector creates a pseudo-element which is the last child of the selected element. These pseudo-elements are often used to create cosmetic content, which you will see later in this project.
+
+For now, create a CSS selector to target all elements with *, and include the pseudo-elements with ::before and ::after. Set the box-sizing property to inherit.
+- float property css
+- Now it is time to use the pseudo-selectors you prepared for earlier. To create the black keys, add a new .key.black--key::after selector. This will target the elements with the class key black--key, and select the pseudo-element after these elements in the HTML.
+
+In the new selector, set the background-color to #1d1e22. Also set the content property to "". This will make the pseudo-elements empty.
+
+The content property is used to set or override the content of the element. By default, the pseudo-elements created by the ::before and ::after pseudo-selectors are empty, and the elements will not be rendered to the page. Setting the content property to an empty string "" will ensure the element is rendered to the page while still being empty.
+
+If you would like to experiment, try removing the background-color property and setting different values for the content property, such as "♥". Remember to undo these changes when you are done so the tests pass.
+- the .key.black--key::after
+- The img element needs its parent to have a position set as a point of reference. Set the position of the #piano selector to relative.
+- The @media at-rule, also known as a media query, is used to conditionally apply CSS. Media queries are commonly used to apply CSS based on the viewport width using the max-width and min-width properties.
+
+In the below example the padding is applied to the .card class when the viewport is 960px wide and below.
+
+@media (max-width: 960px) {
+  .card {
+    padding: 2rem;
+  }
+}
+Add a media query that will be applied when the viewport is 768px wide and below.
+- Add a new #piano selector within your @media query, and set the width to 358px.
+- You might have noticed the keys collapse when the browser window is smaller than 768px. Set overflow to hidden in the first .keys selector, to take care of this issue. This property will hide any element that is pushed outside the set width value of .keys.
+- Logical operators can be used to construct more complex media queries. The and logical operator is used to query two media conditions.
+
+For example, a media query that targets a display width between 500px and 1000px would be:
+
+@media (min-width: 500px) and (max-width: 1000px){
+
+}
+Add another @media rule to apply if the browser window is wider than 769px but smaller than 1199px.
 
 ### November 9, 2023
 - finished the certification project tribute page
-- reviewing notes
+- started and finished the balance sheet pseudo selector
+- next is the intermediate css cat painting
+- reviewing freecodecamp notes from the last couple of days
+<!--  -->
+- Screen readers announce HTML elements based on the document flow. We will eventually want the balance sheet to have a heading of "Balance Sheet" and a subheading of "AcmeWidgetCorp". However, this order does not make sense if announced by a screen reader.
+
+Give your existing span the class attribute set to flex, and add two span elements within it. Give the first the text AcmeWidgetCorp. Give the second the text Balance Sheet. You will use CSS to reverse the order of the text on the page, but the HTML order will make more sense for a screen reader.
+- Below your h1 element, create a div element. Give it an id attribute set to years. You want this particular element to be hidden from screen readers, so give it the aria-hidden attribute set to true.
+- Below your existing div element, add a new div element with a class set to table-wrap. This will be the container for your tables.
+
+Within that, add three table elements. You will be using CSS to style these into a single table, but using separate tables will help screen readers understand the document flow.
+- HTML tables use the caption element to describe what the table is about. The caption element should always be the first child of a table, but can be positioned with the caption-side CSS property.
+
+Add a caption element to your first table, and give it the text Assets.
+- caption
+- thead
+- tbody
+- tr
+- The tr element is used to indicate a table row. Add a tr element within your thead element. In your new tr element, add a td element, followed by three th elements.
+
+The td element indicates a data cell, while the th element indicates a header cell.
+- Leave the td element empty. This element exists only to ensure your table has a four-column layout and associate the headers with the correct columns.
+- Before you get too far into your styling, you should make use of the sr-only class. You can use CSS to make elements with this class completely hidden from the visual page, but still be announced by screen readers.
+
+The CSS you are about to write is a common set of properties used to ensure elements are completely hidden visually.
+
+The span[class~="sr-only"] selector will select any span element whose class includes sr-only. Create that selector, and give it a border property set to 0.
+- The CSS clip property is used to define the visible portions of an element. Set the span[class~="sr-only"] selector to have a clip property of rect(1px, 1px, 1px, 1px).
+
+The clip-path property determines the shape the clip property should take. Set the clip-path property to the value of inset(50%), forming the clip-path into a rectangle within the element.
+- size them down, width and height 1 px;
+- To prevent the text content from overflowing, give your span[class~="sr-only"] selector an overflow property set to hidden and a white-space property set to nowrap.
+- Finally, you need to take these hidden elements out of the document flow. Give the span[class~="sr-only"] selector a position property set to absolute, a padding property set to 0, and a margin property set to -1px. This will ensure that not only are they no longer visible, but they are not even within the page view.
+- Target your flex container with an h1 .flex selector. Give it a display property set to flex to enable the flexbox layout. Then set the flex-direction property to column-reverse - this will display the nested elements from bottom to top. Finally, set the gap property to 1rem to create some space between the elements.
+- The :first-of-type pseudo-selector is used to target the first element that matches the selector. Create an h1 .flex span:first-of-type selector to target the first span element in your .flex container. Remember that your span elements are reversed, visually, so this will appear to be the second element on the page.
+
+Give your new selector a font-size property of 0.7em to make it look like a sub-heading.
+- You wrapped your table in a section element - now you can style that to give your table a border. Create a section selector, and give it a max-width property set to 40rem for responsive design. Set the margin property to 0 auto to center it, and set the border property to 2px solid #d0d0d5.
+- The last part of your table heading is your years. Create a #years selector, and enable flexbox. Justify the content to the end of the flex direction, and make the element sticky. Fix it to the top of its container with top: 0.
+- The calc() function is a CSS function that allows you to calculate a value based on other values. For example, you can use it to calculate the width of the viewport minus the margin of an element:
+
+.example {
+  margin: 10px;
+  width: calc(100% - 20px);
+}
+Give #years a margin of 0 -2px, and a padding set to 0.5rem calc(1.25rem + 2px) 0.5rem 0.
+- Adding position sticky moved the element into its own stack. To ensure your #years element does not get hidden by different stacks, add a z-index property set to 999 in the #years rule.
+- Style the text within your #years element by creating a #years span[class] selector. The span[class] syntax will target any span element that has a class attribute set, regardless of the attribute's value.
+
+Give your new selector a bold font, a width of 4.5rem, and text aligned to the right.
+- Before you start diving in to the table itself, your span elements are currently bolded. Create a span:not(.sr-only) selector and give it a font-weight property set to normal.
+
+The :not() pseudo-selector is used to target all elements that do not match the selector - in this case, any of your span elements that do not have the sr-only class. This ensures that your earlier rules for the span[class~="sr-only"] selector are not overwritten.
+- Rather than having to constantly double-check you are not overwriting your earlier properties, you can use the !important keyword to ensure these properties are always applied, regardless of order or specificity.
+
+Give each property in your span[class~="sr-only"] selector an !important keyword. Do not change any of the values.
+- Now that you have added the !important keyword, you can remove the :not(.sr-only) from your span selector.
+- Create a table selector to target your tables. Set the border-collapse property to collapse, which will allow cell borders to collapse into a single border, instead of a border around each cell. Also set the border property to 0 to hide the borders themselves.
+- Create a selector to target your td elements within your table body. Give them a width to fill the viewport, with a minimum and maximum of 4rem. This approach ensures that the width is fixed, whereas setting width specifically would allow the elements to shrink to the container.
+- The [attribute="value"] selector targets any element that has an attribute with a specific value. Create a tr[class="total"] selector to target specifically your tr elements with the total class. Give it a bottom border of 4px double #0a0a23 and make the font bold.
+- The key difference between tr[class="total"] and tr.total is that the first will select tr elements where the only class is total. The second will select tr elements where the class includes total.
+
+In your case, tr.total will work. You can use this selector to target all td elements within your .total rows. Align the text to the right, and give them a padding of 0 0.25rem.
+- The :nth-of-type() pseudo-selector is used to target specific elements based on their order among siblings of the same type. Use this pseudo-selector to target the third td element within your total table rows. Give it a right padding of 0.5rem.
+- Create a tr.data th .description selector to target the elements with the class set to description that are within your th elements in your .data table rows. Give them a block display, make the text italic with a normal weight, and position them with a padding set to 1rem 0 0.75rem and a right margin of -13.5rem.
+- Your span elements now all have more specific styling, which means you can remove your span rule.
+- Your dollar amounts are currently misaligned. Create a selector to target the td elements within your tr.data elements. Vertically align the text to the top, horizontally align the text to the right, and set the padding to 0.3rem 0.25rem 0.
 
 ### November 8, 2023
 - finished the accessibility quiz module, next certification project
