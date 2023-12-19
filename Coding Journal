@@ -18,6 +18,33 @@
 
 <!--  -->
 
+### December 18, 2023
+<!--  -->
+- Gradients can use as many colors as you want like this:
+
+gradient-type(
+  color1,
+  color2,
+  color3
+);
+Add a linear-gradient to .bb1d with orange as the first color, --building-color1 as the second, and --window-color1 as the third. Remember to use the gradient on the background property.
+
+### December 14, 2023
+- remember how to add multiple classes in html
+<!--  -->
+- Gradients in CSS are a way to transition between colors across the distance of an element. They are applied to the background property and the syntax looks like this:
+
+gradient-type(
+  color1,
+  color2
+);
+In the example, color1 is solid at the top, color2 is solid at the bottom, and in between it transitions evenly from one to the next. In .bb1a, add a background property below the background-color property. Set it as a gradient of type linear-gradient that uses --building-color1 as the first color and --window-color1 as the second.
+- background: linear-gradient(
+    var(--building-color1), 
+    var(--window-color1)
+  );
+- You want to add the same gradient to the next two sections. Instead of doing that, create a new class selector called bb1-window, and move the height and background properties and values from .bb1a to the new class selector.
+
 ### December 13, 2023
 <!--  -->
 - Move the position of .fb4 relative to where it is now by adding a position of relative and left of 10% to it. Do the same for .fb5 but use right instead of left. This will cover up the remaining white space in between the buildings.
