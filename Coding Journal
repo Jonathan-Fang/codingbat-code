@@ -18,6 +18,10 @@
 
 <!--  -->
 
+### January 19, 2024
+<!--  -->
+- Next, remove the width and height from .bb2a, and change the border-left and border-right to use 5vw instead of 1vw. The element will now have zero size and the borders will come together in the middle.
+
 ### January 17, 2024
 - try learning one thing a day, or maybe like one thing a week or something
 - resuming with freecodecamp, a decent workout actually jump starting my day
